@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>External Links</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
+		<script src="external-links.js"></script>
+		<script>
+			$(function(){
+				$('#maincol a').externallinks();
+			});
+		</script>
+		
+	</head>
+	<body>
+		<code>$('#maincol a').externallinks();</code>
+	
+		<fieldset>
+			<legend>This group is ignored</legend>
+			
+			<ul>
+				<li>This is a link on the <a href="/flip-text/" title="Same domain">same domain</a>.</li>
+				<li>This is a link on a <a href="http://google.com" title="Google.com">different domain</a>.</li>
+			</ul>
+		</fieldset>
+		
+		<fieldset id="maincol">
+			<legend>This group is noticed (id="maincol")</legend>
+			<p>This is just a random paragraph with an <a href="http://stuff.blainsmith.com/retro-text" title="Same domain with full domain">internal link</a>. 
+			However, when someone wants to link <a href="http://yahoo.com" title="Yahoo">elsewhere</a> the link gets a nice icon and class.</p>
+		</fieldset>
+	</body>
+</html>
